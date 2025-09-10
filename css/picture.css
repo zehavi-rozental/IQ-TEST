@@ -1,0 +1,315 @@
+/* הגדרת משתני צבעים */
+:root {
+    --pink: #ff0055;
+    --yellow: #ffd900;
+    --orange: #ff9900;
+    --purple: #6f00ff;
+    --black: #1a1a1a;
+    --white: #fff;
+    --light-gray: #f7f7f7;
+        --gradient-main: linear-gradient(45deg, var(--pink), var(--purple));
+}
+
+/* עיצוב בסיסי */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#userNameDisplay {
+    font-size: 2rem;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+/* עיצוב החלק הראשון - הצגת תמונות */
+.picture-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+    padding: 2rem;
+}
+
+.picture-display img {
+    width: auto;
+    height: 65vh;
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+}
+
+.picture-display h2 {
+    font-size: 2.8rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* שמירה על גודל כפתור החזרה */
+.back-button {
+    scale: 1;
+    transform: none;
+}
+
+/* עיצוב החלק השני - שאלות ותשובות */
+.img-and-answers {
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    gap: 4vh;
+}
+
+.img {
+    height: 50vh;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.answers {
+    width: 140%;
+    max-width: 800px;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* עיצוב כפתורים */
+.button {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    min-height: 60px;
+    background: linear-gradient(45deg, var(--purple), var(--pink));
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(111,0,255,0.3);
+}
+
+/* כפתור חזרה לדף הראשי */
+a[href="main.html"] {
+    text-decoration: none;
+    color: var(--white);
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+button a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(45deg, var(--purple), var(--pink));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+button a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(111,0,255,0.2);
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    border: none;
+    background: none;
+    scale: 1;
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, var(--purple), var(--pink));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.back-button a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(111,0,255,0.2);
+}
+
+/* עיצוב כפתור הפופאפ */
+.modal-footer .btn-primary {
+    background: linear-gradient(45deg, var(--purple), var(--pink));
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.modal-footer .btn-primary:focus,
+.modal-footer .btn-primary:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.modal-footer .btn-primary a {
+    color: var(--white);
+    text-decoration: none;
+}
+.footer {
+    background: var(--gradient-main);
+    color: var(--white);
+    text-align: center;
+    padding: 30px; /* ריווח גדול יותר */
+    font-size: 1.05em; /* גודל טקסט גדול יותר */
+    box-shadow: 0 -10px 25px var(--shadow-medium);
+    font-weight: 500;
+}
+/* אנימציות */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* רספונסיביות */
+@media screen and (max-width: 1200px) {
+    .img, .picture-display img {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img, .picture-display img {
+        width: 40vw;
+    }
+    
+    .answers {
+        width: 120%;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .picture-display img {
+        max-height: 55vh;
+    }
+    
+    button a {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .img, .picture-display img {
+        width: 80vw;
+    }
+    
+    .answers {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    
+    .button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .picture-display img {
+        max-height: 45vh;
+    }
+    
+    button a {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+.footer {
+    background: var(--gradient-main);
+    color: var(--white);
+    text-align: center;
+    padding: 30px; /* ריווח גדול יותר */
+    font-size: 1.05em; /* גודל טקסט גדול יותר */
+    box-shadow: 0 -10px 25px var(--shadow-medium);
+    font-weight: 500;
+}
+@media (max-width: 480px) {
+    .picture-display img {
+        max-width: 250px;
+    }
+    .answers {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .picture-display img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .picture-display img {
+        max-width: 250px;
+    }
+    }
+@media (max-width: 480px) {
+    .picture-display img {
+        max-width: 250px;
+    }
+    }
+

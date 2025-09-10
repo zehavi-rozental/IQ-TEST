@@ -1,0 +1,178 @@
+
+
+:root{
+        --gradient-main: linear-gradient(45deg, var(--pink), var(--purple));
+}
+@import url('../css/main.css');
+
+/* Modal Base Styles */
+.modal-content {
+    background: var(--card-glass);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transform: translateY(20px);
+    animation: modalSlideUp 0.3s ease forwards;
+}
+
+@keyframes modalSlideUp {
+    to { transform: translateY(0); }
+}
+
+.modal-header {
+    background: var(--gradient-main);
+    padding: 1.5rem;
+    border: none;
+}
+
+.modal-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-close {
+    background-color: var(--white);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.btn-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* Welcome Modal */
+#welcomePopup .modal-body {
+    padding: 2.5rem;
+}
+
+.kid-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Login Modal */
+#loginPopup .modal-body {
+    padding: 2rem;
+}
+
+.welcome-title {
+    color: var(--text-dark);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-text {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.login-form .form-control {
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.login-form .form-control:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 4px rgba(111, 0, 255, 0.1);
+}
+
+/* Results Modal */
+#resultsPopup .modal-body {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.results-title {
+    background: var(--gradient-main);
+    color: transparent;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.score-display {
+    background: var(--gradient-secondary);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    color: var(--white);
+}
+
+.score-label {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.feedback-message {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+/* Modal Buttons */
+.modal .btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.modal .btn-primary {
+    background: var(--gradient-main);
+    border: none;
+}
+
+.modal .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(111, 0, 255, 0.2);
+}
+.footer {
+    background: var(--gradient-main);
+    color: var(--white);
+    text-align: center;
+    padding: 30px; /* ריווח גדול יותר */
+    font-size: 1.05em; /* גודל טקסט גדול יותר */
+    box-shadow: 0 -10px 25px var(--shadow-medium);
+    font-weight: 500;
+}
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .kid-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .welcome-title {
+        font-size: 1.75rem;
+    }
+    
+    .results-title {
+        font-size: 2rem;
+    }
+}

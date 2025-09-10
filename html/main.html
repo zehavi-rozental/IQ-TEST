@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ברוכים הבאים למבחן ה-IQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- קישור לקובץ ה-CSS של הדף הראשי -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+
+<body>
+    <!-- אלמנט לסמן עכבר מותאם אישית -->
+    <div class="custom-cursor"></div>
+    <div id="particles-js"></div>
+    <button class="menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu"
+        aria-expanded="false" aria-label="תפריט">
+        <span class="menu-icon"></span>
+    </button>
+    <div class="collapse menu-panel" id="menu">
+        <ul class="menu-list">
+            <li><a class="menu-link" href="../html/iq-tests.html">  IQ</a></li>
+            <li><a class="menu-link" href="../html/iq-info.html">מידע</a></li>
+            <li><a class="menu-link" href="../html/diagnostics.html">סוגי אבחונים</a></li>
+            <li><a class="menu-link" href="#info">הוראות </a></li>
+            <li><a class="menu-link" href="#contact">צור קשר</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <header id="main-header" class="main-header">
+            <div class="img-box">
+                <!-- תמונה של דמות תלת מימדית במקום התמונות הקודמות -->
+                <img src="/img/תמונה.png" alt="דמות תלת מימדית" class="img-3d-character animate__animated animate__zoomIn">
+            </div>
+            <div class="main-text">
+                <h1 class="animate__animated animate__fadeInLeft">THE BEST MINDS</h1>
+                <h3 class="animate__animated animate__fadeInLeft animate__delay-1s">ARE FOUND IN CHILDREN</h3>
+                <div class="main-btns animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#info" class="btn btn-main">הוראות</a>
+                    <a href="#contact" class="btn btn-main">צור קשר</a>
+                </div>
+            </div>
+        </header>
+        <section class="test-links-circles">
+            <div class="test-circles-container">
+                <a href="#" onclick="showLoginPopup('shapes')" class="test-circle tc1">
+                    <i class='bx bx-brain'></i>
+                    <span>מבחן צורות</span>
+                </a>
+                <a href="#" onclick="showLoginPopup('pictures')" class="test-circle tc2">
+                    <i class='bx bx-bulb'></i>
+                    <span>התאמת תמונות</span>
+                </a>
+                <a href="#" onclick="showLoginPopup('questions')" class="test-circle tc3">
+                    <i class='bx bx-calculator'></i>
+                    <span>מבחן שאלות</span>
+                </a>
+                <a href="#" onclick="showLoginPopup('different')" class="test-circle tc4">
+                    <i class='bx bx-chat'></i>
+                    <span>מבחן יוצא דופן</span>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="headline animate__animated animate__fadeInUp">
+            <h1>הכוחות הגדולים טמונים במוחות הקטנים</h1>
+        </section>
+
+        <section id="boxes" class="boxes-section">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper boxes">
+                    <div class="swiper-slide box1 animate__animated animate__fadeInUp animate__delay-1s">
+                        <p>ילדים חכמים תמיד מבינים שהלימודים יכולים להיות מהנים! בואו לגלות עולם של משחקים חכמים!</p>
+                    </div>
+                    <div class="swiper-slide box2 animate__animated animate__fadeInUp animate__delay-1-2s">
+                        <p>חידוד החשיבה שלך חשוב בדיוק כמו פיתוח היכולות הקוגניטיביות שלך. השקע בזמנך ומשחקים ייחודיים!</p>
+                    </div>
+                    <div class="swiper-slide box3 animate__animated animate__fadeInUp animate__delay-1-4s">
+                        <p>שאלות חשיבה מקיפות אותך בהבנה עמוקה יותר של עצמך. כל שאלה היא הזדמנות להכיר אותך טוב יותר!</p>
+                    </div>
+                    <div class="swiper-slide box4 animate__animated animate__fadeInUp animate__delay-1-6s">
+                        <p>שאלות חשיבה יכולות להיות כיף גדול! תאתגרו את החברים שלכם ותראו מי הכי חכם!</p>
+                    </div>
+                    <div class="swiper-slide box5 animate__animated animate__fadeInUp">
+                        <p>כל יום הוא הזדמנות ללמוד משהו חדש! אל תפחדו לטעות, כך לומדים הכי טוב.</p>
+                    </div>
+                    <div class="swiper-slide box6 animate__animated animate__fadeInUp">
+                        <p>האם ידעתם? משחקי חשיבה משפרים את הזיכרון והיצירתיות שלכם!</p>
+                    </div>
+                    <div class="swiper-slide box7 animate__animated animate__fadeInUp">
+                        <p>החברים הכי טובים לומדים יחד! שתפו את המבחן עם חבר או חברה.</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section id="info" class="section animate__animated animate__fadeInUp">
+            <h2 class="mb-3">הוראות למבחן</h2>
+            <ul class="list-group list-group-flush info-list">
+                <li class="list-group-item"><i class='bx bx-book-reader'></i> קרא כל שאלה בעיון.</li>
+                <li class="list-group-item"><i class='bx bx-check-circle'></i> בחר את התשובה הנכונה ביותר לדעתך.</li>
+                <li class="list-group-item"><i class='bx bx-time'></i> אין הגבלת זמן, אך מומלץ לענות ברצף.</li>
+                <li class="list-group-item"><i class='bx bx-award'></i> בסיום המבחן תוצג התוצאה שלך.</li>
+            </ul>
+        </section>
+
+        <section id="why" class="section animate__animated animate__fadeInUp">
+            <h2 class="mb-3">למה כדאי לעשות את המבחן?</h2>
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <div class="p-3 why-box">המבחן עוזר לך להכיר את עצמך טוב יותר, לאתגר את המוח ולשפר את יכולות החשיבה.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="p-3 why-box">התוצאה יכולה לשמש אותך בלימודים, בעבודה ובחיים האישיים.</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container my-5">
+            <div class="row justify-content-center align-items-stretch g-4">
+                <div class="col-12 col-md-6 d-flex">
+                    <section id="faq" class="section animate__animated animate__fadeInUp flex-fill d-flex flex-column"
+                        style="max-width:420px;min-width:220px;margin:auto; height:100%;">
+                        <h2 class="mb-3" style="font-size:2em;">שאלות נפוצות</h2>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        מה זה מבחן ה-IQ הזה?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        מבחן ה-IQ שלנו הוא כלי מהנה ואינטראקטיבי לבדוק את כישורי החשיבה וההיגיון שלך
+                                        באמצעות שאלות מגוונות ומאתגרות.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        איך המבחן עובד?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        המבחן כולל סדרת שאלות בהן תצטרך לבחור את התשובה הנכונה ביותר לדעתך. לאחר סיום
+                                        המבחן תקבל משוב מיידי על התוצאות שלך.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        האם יש הגבלת זמן למבחן?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        לא, אין הגבלת זמן. המבחן מיועד להיות מהנה ולא מלחיץ. עם זאת, מומלץ לנסות
+                                        לענות על השאלות ברצף ובזמן סביר.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        איך אני מקבל את התוצאות שלי?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        לאחר סיום המבחן, התוצאות שלך יופיעו מיד בפופ-אפ מיוחד עם משוב על הביצועים שלך.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12 col-md-6 d-flex">
+                    <section id="contact" class="section animate__animated animate__fadeInUp" style="max-width:600px;margin:40px auto 0 auto;">
+                        <h2 class="mb-3" style="font-size:2em;">צור קשר</h2>
+                        <form class="row g-3 bg-light p-3 rounded shadow-sm contact-form" autocomplete="off">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">שם מלא</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">אימייל</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="msg" class="form-label">הודעה</label>
+                                <textarea class="form-control" id="msg" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button onclick="location.href='./thank.html'" type="button" class="btn btn-main px-5">שלח</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer animate__animated animate__fadeInUp">
+        <p class="mb-0">
+            <i class="bx bxs-bulb bx-flashing text-warning" style="font-size:1.2em;vertical-align:middle;"></i>
+            כל הזכויות שמורות &copy; Zehavi & Lali
+        </p>
+    </footer>
+
+    <!-- פופ-אפ ברוכים הבאים -->
+    <div class="modal fade" id="welcomePopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ברוכים הבאים! 🌟</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- תמונה של דמות תלת מימדית בפופ-אפ -->
+                    <img src="../img/תמונה.png" alt="ילד חושב" class="kid-image animate__animated animate__bounceIn">
+                    <h2>ידעת שאתה מיוחד?</h2>
+                    <p>כל תשובה שתענה תעזור לך להיות עוד יותר חכם!
+                        בוא נגלה יחד כמה דברים מעניינים! 🌟</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">בואו נתחיל!🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- פופ-אפ התחברות -->
+    <div class="modal fade" id="loginPopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- תמונה של דמות תלת מימדית בפופ-אפ -->
+                    <img src="../img/kid-thinking.png" alt="ילד מחייך" class="kid-image animate__animated animate__bounceIn">
+                    <h2 class="welcome-title mb-4">איזה כיף שבאת! 🎉</h2>
+                    <p class="welcome-text mb-4">בוא נצא להרפתקה מדהימה של משחק ולמידה! 🌟</p>
+                    <form id="loginForm" onsubmit="handleLogin(event)" class="login-form">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="userName" placeholder="השם שלך" required>
+                            <label for="userName">איך קוראים לך?</label>
+                        </div>
+                        <input type="hidden" id="selectedTest">
+                        <button type="submit" class="btn btn-primary btn-lg w-100 animate__animated animate__pulse animate__infinite">
+                            בואו נתחיל! 🚀
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- פופ-אפ תוצאות -->
+    <div class="modal fade" id="resultsPopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <!-- תמונה של דמות תלת מימדית בפופ-אפ -->
+                    <img src="../img/kid-thinking.png" alt="ילד שמח" class="kid-image animate__animated animate__bounceIn">
+                    <h2 class="results-title mb-4">כל הכבוד! 🌟</h2>
+                    <div class="score-display mb-4">
+                        <span class="score-label">הציון שלך:</span>
+                        <span id="finalScore" class="score-value animate__animated animate__bounceIn"></span>
+                    </div>
+                    <div class="feedback-message mb-4"></div>
+                    <button onclick="window.location.href='main.html'" class="btn btn-primary btn-lg animate__animated animate__pulse">
+                        חזרה לדף הבית 🏠
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+   
+    <script src="../javascript/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.mySwiper', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    600: { slidesPerView: 2 },
+                    900: { slidesPerView: 3 }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+        });
+    </script>
+</body>
+</html>

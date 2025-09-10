@@ -1,0 +1,465 @@
+/* ייבוא סגנונות ראשיים ומשתני צבע מהקובץ הראשי */
+@import url('../css/main.css');
+
+/* הגדרות בסיסיות לגוף הדף */
+body {
+    background-color: var(--light-gray); /* רקע בהיר ונעים */
+    font-family: 'Rubik', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden; /* מניעת גלילה אופקית */
+    position: relative;
+    cursor: auto; /* סמן העכבר המקורי גלוי כעת */
+    overflow-y: hidden; /* מונע גלילה כללית בעמוד, התוכן יותאם לגובה המסך */
+}
+
+/* שכבת רקע דינמית נוספת - תורמת למראה הלא-משעמם */
+.dynamic-background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 153, 0, 0.15) 0%, transparent 70%),
+                linear-gradient(45deg, rgba(var(--pink-rgb), 0.05), rgba(var(--purple-rgb), 0.05));
+    background-size: 200% 200%;
+    animation: dynamic-bg-gradient 25s ease-in-out infinite alternate;
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* סמן עכבר מותאם אישית - נשלט ע"י JS */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border-radius: var(--border-radius-circle);
+    background-color: var(--yellow);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out, opacity 0.1s ease-out;
+    z-index: 9999;
+    opacity: 0.8;
+}
+
+.custom-cursor.active {
+    width: var(--cursor-active-size);
+    height: var(--cursor-active-size);
+    opacity: 0.5;
+}
+
+/* קונטיינר ראשי לשאלות - ממורכז ומרווח */
+.questions-container {
+    height: calc(100vh - 100px); /* גובה קבוע שמותיר מקום לכפתור ולשם משתמש */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* ריווח פנימי מופחת */
+    position: relative;
+    z-index: 1;
+    max-width: 1200px; /* רוחב מקסימלי כללי */
+    margin: 30px auto 30px auto; /* ריווח מהחלק העליון והתחתון */
+    background-color: var(--white);
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    transition: all 0.3s ease;
+    overflow: hidden; /* מונע גלילה של הקונטיינר הראשי */
+}
+
+.questions-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-strong);
+}
+
+/* אזור השאלה והתשובות - פריסת רשת 50/50 */
+
+/* עיצוב תמונת השאלה */
+.question-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* תופס את כל גובה התא ברשת */
+}
+
+.question-img {
+    width: 100%;
+    height: 100%; /* ממלא את גובה העטיפה */
+    object-fit: contain; /* שמירה על פרופורציות, התאמה לגודל */
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 4px 15px var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 100%; /* ודא שלא חורג מהגובה הזמין */
+    max-width: 100%; /* ודא שלא חורג מהרוחב הזמין */
+}
+
+.question-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px var(--shadow-strong);
+}
+
+/* אזור התשובות - רשת של תמונות (כעת Flexbox) */
+.answers-grid {
+    display: flex; /* שינוי ל-Flexbox */
+    flex-wrap: wrap; /* מאפשר לתמונות לעבור שורה */
+    justify-content: center; /* ממורכז אופקית */
+    align-items: center; /* ממורכז אנכית */
+    gap: 0; /* הוסר רווח חיצוני בין התשובות */
+    width: 100%;
+    height: 100%; /* תופס את כל הגובה הזמין בתא הרשת */
+    overflow-y: auto; /* מאפשר גלילה בתוך אזור התשובות אם יש רבות */
+    padding-right: 10px; /* רווח קטן לסרגל גלילה */
+}
+
+/* סגנון סרגל גלילה */
+.answers-grid::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+}
+.answers-grid::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+.answers-grid::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 4px;
+}
+.answers-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+}
+
+
+/* תמונת תשובה בודדת */
+.answer-img {
+   
+    height: auto; /* גובה אוטומטי לשמירה על פרופורציות */
+    max-height: 180%; /* גובה מקסימלי לכל תמונה תשובה */
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 3px solid transparent;
+    border-radius: var(--border-radius-main);
+    box-shadow: 0 4px 12px var(--shadow-subtle);
+    background-color: var(--white);
+    padding: 5px; /* רווח פנימי בתוך הבלוק */
+}
+
+.answer-img:hover {
+    transform: scale(1.05) translateY(-5px);
+    border-color: var(--yellow);
+    filter: drop-shadow(0 8px 15px rgba(255, 217, 0, 0.3));
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.answer-img.selected {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 4px var(--purple), 0 0 15px rgba(111, 0, 255, 0.4);
+    transform: scale(1.03);
+}
+
+/* תצוגת שם המשתמש */
+.user-name {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--purple), #9945ff);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(111, 0, 255, 0.2);
+    z-index: 100;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.user-name:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(111, 0, 255, 0.3);
+}
+
+/* כפתור חזרה לדף הראשי */
+#backButton {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 153, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+#backButton:active {
+    transform: translateX(-50%) translateY(-2px) scale(0.98);
+    box-shadow: 0 5px 10px rgba(255, 153, 0, 0.2);
+}
+
+/* אנימציית Fade in */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* אבק כוכבים - אלמנט בודד (נשלט ע"י JS) */
+.stardust-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--yellow);
+    border-radius: var(--border-radius-circle);
+    opacity: 0;
+    animation: stardust-fade-move 1.5s forwards;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* מודלים של בוטסטראפ - עיצוב Glassmorphism */
+.modal-content {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 12px 35px var(--shadow-strong);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.modal-title {
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px var(--shadow-subtle);
+}
+
+.modal-body {
+    padding: 30px 25px;
+}
+
+.modal-body p {
+    font-size: 1em;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 20px;
+    justify-content: center;
+}
+
+.modal-footer .btn {
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.modal-footer .btn-primary {
+    background: var(--gradient-secondary);
+    color: var(--white);
+    border: none;
+}
+
+.modal-footer .btn-secondary {
+    background-color: var(--dark-gray);
+    color: var(--text-dark);
+    border: none;
+}
+
+.modal-footer .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px var(--shadow-strong);
+}
+
+/* סגנונות ספציפיים למודל סיום המבחן */
+#quizEndModal .modal-title {
+    color: var(--pink);
+    font-size: 2.5em;
+}
+
+.score-display {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+#finalScoreDisplay {
+    color: var(--orange);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.cute-message {
+    font-size: 1.2em;
+    color: var(--purple);
+    font-style: italic;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* רספונסיביות */
+@media (max-width: 992px) {
+    .question-content-area {
+        grid-template-columns: 1fr; /* עמודה אחת במובייל */
+        gap: 1.5rem;
+        height: auto; /* מאפשר גובה אוטומטי במצב עמודה אחת */
+        max-height: none; /* מסיר הגבלת גובה קבועה */
+        overflow: visible; /* מאפשר תוכן לחרוג אם צריך */
+    }
+    .question-img {
+        max-height: 350px; /* התאמה לגודל מסך קטן יותר */
+        height: auto; /* גובה אוטומטי */
+    }
+    .answers-grid {
+        max-height: 350px; /* התאמה לגודל מסך קטן יותר */
+        grid-template-columns: repeat(2, 1fr); /* עדיין 2 עמודות לתשובות */
+        height: auto; /* גובה אוטומטי */
+    }
+    .answer-img {
+        max-height: 150px;
+        height: auto; /* גובה אוטומטי */
+    }
+    .user-name {
+        font-size: 1rem;
+        padding: 0.7rem 1.3rem;
+    }
+    #backButton {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.9em;
+    }
+    .modal-title {
+        font-size: 1.8em;
+    }
+    #quizEndModal .modal-title {
+        font-size: 2.2em;
+    }
+    .score-display {
+        font-size: 1.6em;
+    }
+    #finalScoreDisplay {
+        font-size: 1.3em;
+    }
+    .cute-message {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .questions-container {
+        padding: 1.5rem 0.8rem;
+    }
+    .question-img {
+        max-height: 300px;
+    }
+    .answers-grid {
+        max-height: 300px;
+        gap: 0.8rem;
+    }
+    .answer-img {
+        max-height: 120px;
+    }
+    .user-name {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        top: 15px;
+        right: 15px;
+    }
+    #backButton {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85em;
+        bottom: 1.5rem;
+    }
+    .modal-title {
+        font-size: 1.6em;
+    }
+    #quizEndModal .modal-title {
+        font-size: 2em;
+    }
+    .score-display {
+        font-size: 1.4em;
+    }
+    #finalScoreDisplay {
+        font-size: 1.2em;
+    }
+    .cute-message {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .questions-container {
+        padding: 1rem 0.5rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .question-img {
+        max-height: 250px;
+    }
+    .answers-grid {
+        max-height: 250px;
+        grid-template-columns: 1fr; /* עמודה אחת לתשובות במובייל קטן */
+        gap: 0.6rem;
+    }
+    .answer-img {
+        max-height: 100px;
+    }
+    .user-name {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        top: 10px;
+        right: 10px;
+    }
+    #backButton {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8em;
+        bottom: 1rem;
+    }
+    .modal-title {
+        font-size: 1.4em;
+    }
+    #quizEndModal .modal-title {
+        font-size: 1.8em;
+    }
+    .score-display {
+        font-size: 1.2em;
+    }
+    #finalScoreDisplay {
+        font-size: 1.1em;
+    }
+    .cute-message {
+        font-size: 0.9em;
+    }
+}

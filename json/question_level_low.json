@@ -1,0 +1,913 @@
+[
+    {
+        "id": 1,
+        "question": "מה הצבע של השמיים ביום בהיר?",
+        "answers": [
+            {
+                "id": 1,
+                "option": "כחול",
+                "correct": true
+            },
+            {
+                "id": 2,
+                "option": "אדום",
+                "correct": false
+            },
+            {
+                "id": 3,
+                "option": "ירוק",
+                "correct": false
+            },
+            {
+                "id": 4,
+                "option": "צהוב",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "כמה רגליים יש לחרק?",
+        "answers": [
+            {
+                "id": 1,
+                "option": "שש",
+                "correct": true
+            },
+            {
+                "id": 2,
+                "option": "ארבע",
+                "correct": false
+            },
+            {
+                "id": 3,
+                "option": "אני לא יודע",
+                "correct": false
+            },
+            {
+                "id": 4,
+                "option": "שמונה",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "question": "מהו מזון האהוב ביותר על קופים?",
+        "answers": [
+            {
+                "id": 1,
+                "option": "בננות",
+                "correct": true
+            },
+            {
+                "id": 2,
+                "option": "בשר",
+                "correct": false
+            },
+            {
+                "id": 3,
+                "option": "אני לא יודע",
+                "correct": false
+            },
+            {
+                "id": 4,
+                "option": "פיצות",
+                "correct": false
+            }
+        ]
+    },
+        {
+            "id": 4,
+            "question": "מהו צבע העגבנייה?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "אדום",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "ירוק",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "צהוב",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "question": "איזה פירות הם צהובים?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "בננות",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "תפוחים",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא זוכר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "תותים",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "question": "מהי צורת הכדור?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "עגולה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "מרובעת",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "משולשת",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "question": "מהו בעל חיים שאוכל דשא?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "פרה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "חתול",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "נחש",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "question": "מה אנחנו רואים בשמיים בלילה?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "כוכבים",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "שמש",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "עננים",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "question": "מהו לוח השנה?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "מחברת",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "לוח עם ימים",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "מחסן",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "question": "מהו הקיץ?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "עונה חמה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "עונה קרה",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא זוכר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "עונה רטובה",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "question": "מהו העונה שבה יש הרבה גשם?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "קיץ",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "חורף",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "אביב",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא זוכר",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "question": "איזה חיה עפה?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "חתול",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "ציפור",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "כלב",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "question": "באיזה כלי מדידה משתמשים כדי למדוד מים?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "כוס",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "שולחן",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא רואה",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "כיסא",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "question": "איזה חיה נותנת חלב?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "פרה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "חתול",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "תרנגולת",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא זוכר",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "question": "מהי השפה שמדברים בישראל?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "עברית",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "אנגלית",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא זוכר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "ערבית",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "question": "מה צבע הדובדבן?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "אדום",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "כחול",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "ירוק",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "question": "מהי חיה שאוהבת לשחות במים?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "דוב",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "דג",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "גמל",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "question": "מה אנחנו מחפשים בחורף?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "שלג",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "חום",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא זוכר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "גשם",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "question": "מה זה יהלום?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "אבנים יקרות",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "ממתק",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "חלב",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "question": "מה עושה התינוק כדי לתקשר?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "חושב",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "בוכה",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "מדבר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "question": "מהי חיה שמכונה 'מלך החיות'?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "אריה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "פיל",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "אני לא יודע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "דב",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "question": "איך קוראים למקום שבו לומדים בבית ספר?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "כיתה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "מסדרון",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "חדר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "question": "איך קוראים למקום שבו לומדים בבית ספר?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "כיתה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "מסדרון",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "חדר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "question": "איך קוראים למקום שבו לומדים בבית ספר?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "כיתה",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "מסדרון",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "חדר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "question": "מתי אוכלים מצה?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "סוכות",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "פסח",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "שבועות",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אני לא יודע",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "question": "מהו ממתק שמתחיל באות ש'?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "שוקולד",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "עוגה",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "סוכר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אין לי מושג",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "question": "מה עושה ליצן?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "מחייך ומצחיק",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "מביא גשם",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "מרצה על מדע",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "בונה בתים",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "question": "מה הקול של כלב?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "מיאו",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "הו הו!",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "גררר",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "קוקו",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "question": "איזו חיה יש לה אוזניים גדולות?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "שפן",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "פנדה",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "קוף",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "חתול",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "question": "מה הטעם של לימון?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "מתוק",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "חמוץ",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "מלוח",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "מר",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "question": "מה טעם של שוקולד?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "מלוח",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "מר",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "מתוק",
+                    "correct": true
+                },
+                {
+                    "id": 4,
+                    "option": "חמוץ",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "question": "מה הקול של חתול?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "במבה",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "מיאו",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "קוואק",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "הו הו",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "question": "מה אוכלים כדי להיות חזקים?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "ירקות",
+                    "correct": true
+                },
+                {
+                    "id": 2,
+                    "option": "חול",
+                    "correct": false
+                },
+                {
+                    "id": 3,
+                    "option": "ממתקים",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "מים",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "question": "איזה כלי תחבורה עף?",
+            "answers": [
+                {
+                    "id": 1,
+                    "option": "אוטו",
+                    "correct": false
+                },
+                {
+                    "id": 2,
+                    "option": "מטוס",
+                    "correct": true
+                },
+                {
+                    "id": 3,
+                    "option": "רכבת",
+                    "correct": false
+                },
+                {
+                    "id": 4,
+                    "option": "אופניים",
+                    "correct": false
+                }
+            ]
+        }
+    ,
+    {
+        "id": 35,
+        "question": "איפה גר הארנב?",
+        "answers": [
+            {
+                "id": 1,
+                "option": "באף",
+                "correct": false
+            },
+            {
+                "id": 2,
+                "option": "במאורה",
+                "correct": true
+            },
+            {
+                "id": 3,
+                "option": "בחלון",
+                "correct": false
+            },
+            {
+                "id": 4,
+                "option": "בקרח",
+                "correct": false
+            }
+        ]
+    }
+]

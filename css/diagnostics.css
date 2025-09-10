@@ -1,0 +1,258 @@
+:root {
+    --pink: #ff0055;
+    --yellow: #ffd900;
+    --orange: #ff9900;
+    --purple: #6f00ff;
+    --black: #1a1a1a;
+    --white: #fff;
+    --light-gray: #f7f7f7;
+        --gradient-main: linear-gradient(45deg, var(--pink), var(--purple));
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.title {
+    color: var(--purple);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--black);
+    font-size: 1rem;
+}
+
+.diagnostics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.diagnostics-slider {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.diagnostic-card {
+    width: 300px;  /* גודל קבוע לרוחב */
+    height: 250px; /* גודל קבוע לגובה */
+    margin: 0 15px;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex !important; /* חשוב בשביל Slick Carousel */
+    flex-direction: column;
+}
+
+.diagnostic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--purple);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-content h3 i {
+    color: var(--pink);
+    font-size: 1.8rem;
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* עדכון הגדרות ה-Slick Slider */
+.slick-slide {
+    height: 250px;  /* גובה זהה לכרטיסיות */
+}
+
+.slick-track {
+    display: flex !important;
+    align-items: stretch;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--purple);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: var(--pink);
+    transform: translateX(-5px);
+}
+
+.back-btn {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Slick carousel custom styling */
+.slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    background: var(--purple);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 20px;
+}
+
+.slick-dots li button:before {
+    color: var(--purple);
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--pink);
+}
+.extended-content {
+    display: none;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.content-box {
+    padding: 15px;
+}
+
+.reason-box {
+    background: var(--light-gray);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.reason-box:hover {
+    transform: translateX(-5px);
+}
+
+.reason-box h5 {
+    color: var(--purple);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.extended-content.active {
+    display: block;
+}
+
+.extended-content h4 {
+    color: var(--purple);
+    margin-bottom: 1rem;
+}
+
+.extended-content ul {
+    padding-right: 1.2rem;
+}
+
+.extended-content li {
+    margin: 0.5rem 0;
+    color: var(--black);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.diagnostic-card {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* סגנון נוסף לכרטיסים בעת מעבר עכבר */
+.diagnostic-card:hover .card-inner {
+    background: linear-gradient(45deg, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+}
+
+/* תוספת אייקונים או תמונות רקע */
+.card-inner::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: var(--yellow);
+    opacity: 0.2;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.diagnostic-card:hover .card-inner::before {
+    transform: scale(1.5);
+    opacity: 0.3;
+}
+.footer {
+    background: var(--gradient-main);
+    color: var(--white);
+    text-align: center;
+    padding: 30px; /* ריווח גדול יותר */
+    font-size: 1.05em; /* גודל טקסט גדול יותר */
+    box-shadow: 0 -10px 25px var(--shadow-medium);
+    font-weight: 500;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ברוכים הבאים!</title>
+    <!-- קישור לפונט Rubik של גוגל -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap">
+    <style>
+        /*
+         * עיצוב CSS לדף הרשמה מוצלחת
+         * הקוד משתמש במשתני הצבע ובסגנון הכללי מהקוד שסיפקת,
+         * כולל אנימציות עדינות ועיצוב נקי ורספונסיבי.
+         */
+
+        /* הגדרות בסיסיות ומשתני צבע */
+        :root {
+            --pink: #ff0055;
+            --yellow: #ffd900;
+            --orange: #ff9900;
+            --purple: #6f00ff;
+            --black: #1a1a1a;
+            --white: #fff;
+            --light-gray: #f0f0f0;
+            --dark-gray: #d0d0d0;
+            --gradient-main: linear-gradient(45deg, var(--pink), var(--purple));
+            --gradient-secondary: linear-gradient(135deg, var(--yellow), var(--orange));
+            --text-dark: #222;
+            --text-light: #666;
+            --shadow-subtle: rgba(0, 0, 0, 0.08);
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            --shadow-strong: rgba(0, 0, 0, 0.3);
+            --border-radius-main: 25px;
+            --border-radius-circle: 50%;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--light-gray);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            direction: rtl; /* כיוון כתיבה מימין לשמאל */
+        }
+
+        .success-container {
+            max-width: 600px;
+            width: 90%;
+            padding: 50px 30px;
+            background-color: var(--white);
+            border-radius: var(--border-radius-main);
+            box-shadow: 0 10px 30px var(--shadow-medium);
+            border: 3px solid var(--dark-gray);
+            transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
+        }
+        
+        .success-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px var(--shadow-strong);
+        }
+
+        .success-container h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            color: var(--purple);
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 8px var(--shadow-subtle);
+        }
+
+        .success-container p {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* עיצוב כפתור - מותאם לסגנון הקיים שלך */
+        .btn-main {
+            background: var(--gradient-secondary);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            transition: all 0.35s ease;
+            border: none;
+            box-shadow: 0 10px 20px var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            letter-spacing: 0.8px;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px var(--shadow-strong);
+            filter: brightness(1.15);
+        }
+        
+        /* רספונסיביות */
+        @media (max-width: 768px) {
+            .success-container {
+                padding: 40px 20px;
+            }
+            .success-container h1 {
+                font-size: 2.5em;
+            }
+            .success-container p {
+                font-size: 1.1em;
+            }
+            .btn-main {
+                font-size: 1em;
+                padding: 14px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h1>ההרשמה בוצעה בהצלחה!</h1>
+        <p>תודה רבה שהצטרפתם אלינו. אנחנו מתרגשים לראות אתכם בפנים.</p>
+        <a href="./main.html" class="btn-main">חזרה לדף הבית</a>
+    </div>
+</body>
+</html>

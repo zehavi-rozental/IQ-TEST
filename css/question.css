@@ -1,0 +1,177 @@
+/* Import main styles */
+@import url('../css/main.css');
+
+/* Main Container */
+.questions-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--white);
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    border-radius: var(--border-radius-main);
+    cursor: auto;  /* Changed from default to auto to ensure cursor is always visible */
+}
+
+/* Question Styling */
+.question {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(111, 0, 255, 0.1), rgba(255, 0, 85, 0.1));
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--purple);
+    box-shadow: 0 8px 25px rgba(111, 0, 255, 0.15);
+    animation: slideIn 0.5s ease-out;
+    cursor: auto;  /* Changed from default to auto to ensure cursor is always visible */
+}
+
+/* Answer Options */
+.answer {
+    background: var(--white);
+    margin: 1rem auto;
+    padding: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;  /* Already exists */
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+.answer:hover {
+    transform: translateY(-5px);
+    border-color: var(--purple);
+    background: var(--gradient-main);
+    color: var(--white);
+}
+
+/* Next Level Button */
+.next-level-button {
+    background: var(--gradient-secondary);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    cursor: pointer;  /* Already exists */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+}
+
+.next-level-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 153, 0, 0.4);
+}
+
+/* User Name Display */
+.user-name {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--gradient-main);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(111, 0, 255, 0.2);
+    z-index: 100;
+    cursor: auto;  /* Added to ensure cursor is visible */
+}
+
+/* Back Button */
+#backButton {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-main);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(111, 0, 255, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+    cursor: pointer;  /* Already exists */
+}
+.footer {
+    background: var(--gradient-main);
+    color: var(--white);
+    text-align: center;
+    padding: 30px; /* ריווח גדול יותר */
+    font-size: 1.05em; /* גודל טקסט גדול יותר */
+    box-shadow: 0 -10px 25px var(--shadow-medium);
+    font-weight: 500;
+}
+/* Animations */
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .question {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        width: 95%;
+    }
+    
+    .answer {
+        width: 90%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+    .question {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+    
+    .answer {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .next-level-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+/* Add this to ensure cursor is visible everywhere */
+* {
+    cursor: auto;
+}
+
+/* Override pointer cursor for clickable elements */
+button, 
+a, 
+input[type="submit"], 
+input[type="button"], 
+.answer, 
+.next-level-button, 
+#backButton {
+    cursor: pointer !important;
+}

@@ -1,0 +1,88 @@
+[
+    {
+        "pictures": [
+            {
+                "id": 1,
+                "picture": "חיים.jpg",
+                "name": "חיים"
+            },
+            {
+                "id": 2,
+                "picture": "אפרת.jpg",
+                "name": "אפרת"
+            },
+            {
+                "id": 3,
+                "picture": "ארז.jpg",
+                "name": "ארז"
+            },
+            {
+                "id": 4,
+                "picture": "דני.jpg",
+                "name": "דני"
+            },
+            {
+                "id": 5,
+                "picture": "יחזקאל.jpg",
+                "name": "יחזקאל"
+            },
+            {
+                "id": 6,
+                "picture": "ישי.jpg",
+                "name": "ישי"
+            },
+            {
+                "id": 7,
+                "picture": "מאיר.jpg",
+                "name": "מאיר"
+            },
+            {
+                "id": 8,
+                "picture": "מוישי.jpg",
+                "name": "מוישי"
+            },
+            {
+                "id": 9,
+                "picture": "מיכאל.jpg",
+                "name": "מיכאל"
+            },
+            {
+                "id": 10,
+                "picture": "אביגדור.jpg",
+                "name": "אביגדור"
+            },
+            {
+                "id": 11,
+                "picture": "מרים.jpg",
+                "name": "מרים"
+            },
+            {
+                "id": 12,
+                "picture": "תנחום.jpg",
+                "name": "תנחום"
+            },
+       
+            {
+                "id": 13,
+                "picture": "נתי.jpg",
+                "name": "נתי"
+            },
+            {
+                "id": 14,
+                "picture": "ראובן.jpg",
+                "name": "ראובן"
+            },
+            {
+                "id": 15,
+                "picture": "רוני.jpg",
+                "name": "רוני"
+            },
+            {
+                "id": 16,
+                "picture": "שלמה.jpg",
+                "name": "שלמה"
+            }
+            
+        ]
+    }
+]
